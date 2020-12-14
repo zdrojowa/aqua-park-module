@@ -1,0 +1,5 @@
+aquaparks:
+  name: Aquaparki
+  icon: mdi mdi-zodiac-aquarius
+  permission: AquaParkModule
+  route: AquaParkModule::aqua.parks

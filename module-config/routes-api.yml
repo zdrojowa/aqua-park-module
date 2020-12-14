@@ -1,0 +1,17 @@
+api.aqua.parks:
+  path: /aqua-parks
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\ApiController@get
+  methods:
+    - GET
+
+api.aqua.parks.prices:
+  path: /aqua-parks-prices
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\ApiController@prices
+  methods:
+    - GET
+
+api.aqua.parks.passes:
+  path: /aqua-parks/prices/passes
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\ApiController@passes
+  methods:
+    - GET

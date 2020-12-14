@@ -1,0 +1,7 @@
+name: AquaParkModule
+version: 1.0.0
+
+aclAnchor: AquaParkModule
+aclName: Aquaparki
+
+routePrefix: AquaParkModule

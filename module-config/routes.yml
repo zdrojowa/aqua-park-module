@@ -1,0 +1,191 @@
+aqua.parks:
+  path: /dashboard/aqua-parks
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@index
+  methods:
+    - GET
+  permission: AquaParkModule
+
+aqua.parks.sort:
+  path: /dashboard/aqua-parks/sort
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@sort
+  methods:
+    - GET
+  permission: AquaParkModule
+
+aqua.parks.ajax:
+  path: /dashboard/aqua-parks/ajax
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@ajax
+  methods:
+    - POST
+  permission: AquaParkModule
+
+aqua.parks.create:
+  path: /dashboard/aqua-parks/create
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@create
+  methods:
+    - GET
+  permission: AquaParkModule.add
+
+aqua.parks.store:
+  path: /dashboard/aqua-parks/store
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@store
+  methods:
+    - POST
+  permission: AquaParkModule.add
+
+aqua.parks.edit:
+  path: /dashboard/aqua-parks/{{aquaPark}}/edit
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@edit
+  methods:
+    - GET
+  permission: AquaParkModule.edit
+
+aqua.parks.update:
+  path: /dashboard/aqua-parks/{{aquaPark}}
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@update
+  methods:
+    - PUT
+    - PATCH
+  permission: AquaParkModule.edit
+
+aqua.parks.destroy:
+  path: /dashboard/aqua-parks/{{aquaPark}}
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@destroy
+  methods:
+    - DELETE
+  permission: AquaParkModule.delete
+
+aqua.parks.saveOrder:
+  path: /dashboard/aqua-parks/saveOrder
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\AquaParkController@saveOrder
+  methods:
+    - POST
+  permission: AquaParkModule.edit
+
+prices:
+  path: /dashboard/aqua-parks/{{aquaPark}}/prices
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@index
+  methods:
+    - GET
+  permission: AquaParkModule
+
+prices.sort:
+  path: /dashboard/aqua-parks/{{aquaPark}}/sort
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@sort
+  methods:
+    - GET
+  permission: AquaParkModule
+
+prices.ajax:
+  path: /dashboard/aqua-parks/{{aquaPark}}/ajax
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@ajax
+  methods:
+    - POST
+  permission: AquaParkModule
+
+prices.create:
+  path: /dashboard/aqua-parks/{{aquaPark}}/create
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@create
+  methods:
+    - GET
+  permission: AquaParkModule.add
+
+prices.store:
+  path: /dashboard/aqua-parks/prices/store
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@store
+  methods:
+    - POST
+  permission: AquaParkModule.add
+
+prices.edit:
+  path: /dashboard/aqua-parks/prices/{{price}}/edit
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@edit
+  methods:
+    - GET
+  permission: AquaParkModule.edit
+
+prices.update:
+  path: /dashboard/aqua-parks/prices/{{price}}
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@update
+  methods:
+    - PUT
+    - PATCH
+  permission: AquaParkModule.edit
+
+prices.destroy:
+  path: /dashboard/aqua-parks/prices/{{price}}
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@destroy
+  methods:
+    - DELETE
+  permission: AquaParkModule.delete
+
+prices.saveOrder:
+  path: /dashboard/aqua-parks-prices/saveOrder
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PriceController@saveOrder
+  methods:
+    - POST
+  permission: AquaParkModule.edit
+
+passes:
+  path: /dashboard/aqua-parks/prices/{{price}}/passes
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@index
+  methods:
+    - GET
+  permission: AquaParkModule
+
+passes.sort:
+  path: /dashboard/aqua-parks/prices/{{price}}/sort
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@sort
+  methods:
+    - GET
+  permission: AquaParkModule
+
+passes.ajax:
+  path: /dashboard/aqua-parks/prices/{{price}}/ajax
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@ajax
+  methods:
+    - POST
+  permission: AquaParkModule
+
+passes.create:
+  path: /dashboard/aqua-parks/prices/{{price}}/create
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@create
+  methods:
+    - GET
+  permission: AquaParkModule.add
+
+passes.store:
+  path: /dashboard/aqua-parks/prices/passes/store
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@store
+  methods:
+    - POST
+  permission: AquaParkModule.add
+
+passes.edit:
+  path: /dashboard/aqua-parks/prices/passes/{{pass}}/edit
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@edit
+  methods:
+    - GET
+  permission: AquaParkModule.edit
+
+passes.update:
+  path: /dashboard/aqua-parks/prices/passes/{{pass}}
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@update
+  methods:
+    - PUT
+    - PATCH
+  permission: AquaParkModule.edit
+
+passes.destroy:
+  path: /dashboard/aqua-parks/prices/passes/{{pass}}
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@destroy
+  methods:
+    - DELETE
+  permission: AquaParkModule.delete
+
+passes.saveOrder:
+  path: /dashboard/aqua-parks/prices/passes/saveOrder
+  controller: Selene\Modules\AquaParkModule\Http\Controllers\PassController@saveOrder
+  methods:
+    - POST
+  permission: AquaParkModule.edit
