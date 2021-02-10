@@ -59,7 +59,9 @@
             <div class="title">
                 <div>Grupa</div>
                 <div>Sezon niski</div>
+                <div>Sezon niski label</div>
                 <div>Sezon wysoki</div>
+                <div>Sezon wysoki label</div>
             </div>
             <div v-for="group in aqua_park_price.groups">
                 <div v-for="lang in langs" class="body mt-3">
@@ -73,7 +75,13 @@
                         v-model.lazy="prices[group]['season_low'][lang.key]"
                     ></b-form-input>
                     <b-form-input
+                        v-model.lazy="prices[group]['season_low_label'][lang.key]"
+                    ></b-form-input>
+                    <b-form-input
                         v-model.lazy="prices[group]['season_high'][lang.key]"
+                    ></b-form-input>
+                    <b-form-input
+                        v-model.lazy="prices[group]['season_high_label'][lang.key]"
                     ></b-form-input>
                 </div>
             </div>
@@ -195,13 +203,19 @@
                     }
                     this.aqua_park_price.groups.forEach(group => {
                         if (!(group in this.prices)) {
-                            this.prices[group] = {'season_low': {}, 'season_high': {}}
+                            this.prices[group] = {'season_low': {}, 'season_high': {}, 'season_low_label': {}, 'season_high_label': {}}
                         }
                         if (!(lang.key in this.prices[group]['season_low'])) {
                             this.prices[group]['season_low'][lang.key] = ''
                         }
                         if (!(lang.key in this.prices[group]['season_high'])) {
                             this.prices[group]['season_high'][lang.key] = ''
+                        }
+                        if (!(lang.key in this.prices[group]['season_low_label'])) {
+                            this.prices[group]['season_low_label'][lang.key] = ''
+                        }
+                        if (!(lang.key in this.prices[group]['season_high_label'])) {
+                            this.prices[group]['season_high_label'][lang.key] = ''
                         }
                     })
                 })

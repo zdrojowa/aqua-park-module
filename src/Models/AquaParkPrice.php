@@ -33,4 +33,9 @@ class AquaParkPrice extends Model
     {
         return AquaPark::query()->find($this->aqua_park);
     }
+
+    public function getPasses()
+    {
+        return AquaParkPricePass::query()->where('aqua_park_price', '=', $this->id)->get();
+    }
 }

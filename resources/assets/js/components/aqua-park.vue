@@ -194,7 +194,7 @@
         methods: {
 
             selectLogo: function(url) {
-                this.logo = url
+                this.logo = url.url
             },
 
             removeLogo: function() {
@@ -202,7 +202,7 @@
             },
 
             selectPhoto: function(url) {
-                this.photo = url
+                this.photo = url.url
             },
 
             removePhoto: function() {
@@ -210,7 +210,7 @@
             },
 
             selectMarker: function(url) {
-                this.marker = url
+                this.marker = url.url
             },
 
             removeMarker: function() {
