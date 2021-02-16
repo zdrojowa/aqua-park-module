@@ -8,3 +8,6 @@
 
 ## Version 1.2.0
 - Add  mobile img
+
+## Version 1.2.1
+- Fix saving aquapark data

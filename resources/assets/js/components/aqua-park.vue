@@ -324,10 +324,10 @@
                     formData.append('coordinates[longitude]', this.coordinates.longitude)
                     formData.append('facebook', this.facebook)
                     formData.append('instagram', this.instagram)
-                    formData.append('work_days', JSON.stringify(this.work_days))
+                    formData.append('work_days', JSON.stringify({...this.work_days}))
                     formData.append('work_hours', this.work_hours)
-                    formData.append('season_low', JSON.stringify(this.season_low))
-                    formData.append('season_high', JSON.stringify(this.season_high))
+                    formData.append('season_low', JSON.stringify({...this.season_low}))
+                    formData.append('season_high', JSON.stringify({...this.season_high}))
 
                     axios.post(this.url, formData, {
                         headers: {
