@@ -5,3 +5,6 @@
 
 ## Version 1.1.0
 - Fix url, add labels for prices
+
+## Version 1.2.0
+- Add  mobile img

@@ -36,6 +36,16 @@
                                 Usuń
                             </b-btn>
                         </div>
+                        <div class="thumbnail-img">
+                            <media-selector
+                                extensions="jpg,jpeg,png"
+                                @media-selected="changeMoileUrl(index, $event)"
+                            ></media-selector>
+                            <img v-if="element.mobile_url" :src="element.mobile_url" class="img-thumbnail">
+                            <b-btn v-if="element.mobile_url" variant="danger" @click="removeMobileUrl(index)">
+                                Usuń
+                            </b-btn>
+                        </div>
                         <div class="gallery-form px-3">
                             <b-input-group prepend="Tytuł" class="mt-3">
                                 <b-form-input v-model.lazy="element.title"></b-form-input>
@@ -109,11 +119,16 @@
                 this.map[index].description_url = ''
             },
 
+            removeMobileUrl(index) {
+                this.map[index].mobile_url = ''
+            },
+
             add(args) {
                 this.map.push({
                     id: args._id,
                     url: args.url,
                     description_url: '',
+                    mobile_url: '',
                     title: args.title,
                     description: args.alt,
                     link: {text: '', url: ''}
@@ -127,6 +142,10 @@
 
             changeDescriptionUrl(index, $event) {
                 this.map[index].description_url = $event.url
+            },
+
+            changeMoileUrl(index, $event) {
+                this.map[index].mobile_url = $event.url
             },
 
             save() {
