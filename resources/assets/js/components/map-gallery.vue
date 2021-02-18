@@ -82,13 +82,18 @@
             id: {
                 required: true,
                 type: String
+            },
+            lang: {
+                required: true,
+                type: String
             }
         },
 
         data() {
             return {
                 element: {id: '', url: '', description_url: '', title: '', description: '', link: {text: '', url: ''}},
-                map: []
+                map: [],
+                mapDefaultState: null
             };
         },
 
@@ -97,14 +102,16 @@
         },
 
         methods: {
-
             getMap() {
                 axios.get('/api/aqua-parks?id=' + this.id)
                 .then(res => {
+                    this.mapDefaultState = res.data.map
                     if (typeof res.data.map == 'undefined') {
-                        this.map = []
+                        this.map = {}
+                    } else if (res.data.map[this.lang]) {
+                        this.map = res.data.map[this.lang]
                     } else {
-                        this.map = res.data.map
+                        this.map = []
                     }
                 }).catch(err => {
                     console.log(err)
@@ -149,9 +156,12 @@
             },
 
             save() {
+                let payload = this.mapDefaultState
+                payload[this.lang] = this.map
+
                 let formData = new FormData()
                 formData.append('_method', 'PUT')
-                formData.append('map', JSON.stringify(this.map))
+                formData.append('map', JSON.stringify({...payload}))
 
                 axios.post('/dashboard/aqua-parks/' + this.id, formData, {
                     headers: {

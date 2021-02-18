@@ -17,3 +17,6 @@
 
 ## Version 1.3.1
 - Disclaimer - JSON
+
+## Version 1.3.2
+- Map translations

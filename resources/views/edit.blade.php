@@ -41,9 +41,25 @@
                         </b-tab>
                         <b-tab>
                             <template v-slot:title>
-                                <b-icon-map></b-icon-map> Map
+                                <b-icon-map></b-icon-map> Map PL
                             </template>
-                            <map-gallery :id=`{{ $aquaPark->_id }}`>
+                            <map-gallery :id=`{{ $aquaPark->_id }}` lang="pl">
+                                {{ csrf_field() }}
+                            </map-gallery>
+                        </b-tab>
+                        <b-tab>
+                            <template v-slot:title>
+                                <b-icon-map></b-icon-map> Map EN
+                            </template>
+                            <map-gallery :id=`{{ $aquaPark->_id }}` lang="en">
+                                {{ csrf_field() }}
+                            </map-gallery>
+                        </b-tab>
+                        <b-tab>
+                            <template v-slot:title>
+                                <b-icon-map></b-icon-map> Map DE
+                            </template>
+                            <map-gallery :id=`{{ $aquaPark->_id }}` lang="de">
                                 {{ csrf_field() }}
                             </map-gallery>
                         </b-tab>
