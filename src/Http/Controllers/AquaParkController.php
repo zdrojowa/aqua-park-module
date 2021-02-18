@@ -69,7 +69,7 @@ class AquaParkController extends Controller
             }
         }
 
-        $fields = ['work_days', 'season_low', 'season_high', 'icons', 'gallery', 'map'];
+        $fields = ['work_days', 'season_low', 'season_high', 'icons', 'gallery', 'map', 'disclaimer'];
         foreach($fields as $field) {
             if ($request->has($field)) {
                 $request->merge([$field => json_decode($request->get($field))]);
