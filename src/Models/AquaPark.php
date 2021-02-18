@@ -32,7 +32,8 @@ class AquaPark extends Model
         'gallery',
         'map',
         'icons',
-        'order'
+        'order',
+        'disclaimer',
     ];
 
     /**

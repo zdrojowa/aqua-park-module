@@ -55,6 +55,14 @@
                                 {{ csrf_field() }}
                             </legend-info>
                         </b-tab>
+                        <b-tab>
+                            <template v-slot:title>
+                                <b-icon-images></b-icon-images> Disclaimer
+                            </template>
+                            <disclaimer-info :id=`{{ $aquaPark->_id }}`>
+                                {{ csrf_field() }}
+                            </disclaimer-info>
+                        </b-tab>
                     @endisset
                 </b-tabs>
             </b-card>

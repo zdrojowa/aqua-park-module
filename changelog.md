@@ -11,3 +11,6 @@
 
 ## Version 1.2.1
 - Fix saving aquapark data
+
+## Version 1.3.0
+- Add disclaimers

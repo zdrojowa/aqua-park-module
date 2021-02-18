@@ -2,9 +2,11 @@ import Vue from 'vue';
 import draggable from 'vuedraggable';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import MultiSelect from 'vue-multiselect'
+import CKEditor from '@ckeditor/ckeditor5-vue';
 
 window.axios = require('axios');
 
+Vue.use(CKEditor);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
@@ -20,6 +22,8 @@ Vue.component('map-gallery', require('./components/map-gallery.vue').default);
 Vue.component('price', require('./components/price.vue').default);
 Vue.component('icons', require('./components/icons.vue').default);
 Vue.component('pass', require('./components/pass.vue').default);
+Vue.component('editor', require('./components/editor.vue').default);
+Vue.component('disclaimer-info', require('./components/disclaimer-info.vue').default);
 
 const app = new Vue({
     el: '#app'
