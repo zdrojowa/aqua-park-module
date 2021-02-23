@@ -20,3 +20,6 @@
 
 ## Version 1.3.2
 - Map translations
+
+## Version 1.3.3
+- Fix disclaimer

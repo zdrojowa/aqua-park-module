@@ -75,7 +75,7 @@
                 axios.get('/api/aqua-parks?id=' + this.id)
                 .then(res => {
                     if (res.data.disclaimer != null) {
-                        this.disclaimer = JSON.parse(res.data.disclaimer)
+                        this.disclaimer = res.data.disclaimer
                     }
 
                     this.checkLangs(this.disclaimer)
